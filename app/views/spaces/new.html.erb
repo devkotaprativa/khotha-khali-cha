@@ -1,27 +1,2 @@
-<h2>Share the information about your space to world</h2>
-<%= form_for [@user, @space] do |f| %>
-	<p>
-		<%= f.label :name %><br>
-		<%= f.text_field :name %>
-	</p>
-	<p>
-		<%= f.label :location %><br>
-		<%= f.text_field :location %>
-	</p>
-	<p>
-		<%= f.label :phone_number %><br>
-		<%= f.number_field :phone_number %>
-	</p>
-	<p>
-		<%= f.label :number_of_rooms %><br>
-		<%= f.number_field :number_of_rooms %>
-	</p>
-	<p>
-		<%= f.label :price %><br>
-		<%= f.number_field :price %>
-	</p>
-	<p>
-		<%= f.submit %>		
-	</p>
-<% end %>
+<%= render 'form' %>
 

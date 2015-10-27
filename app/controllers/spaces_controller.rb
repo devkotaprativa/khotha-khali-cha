@@ -23,15 +23,35 @@ class SpacesController < ApplicationController
   end
 
   def update
+    @user = User.find(params[:user_id])
+    @space = Space.find(params[:id])
+    if @space.update(set_params)
+     flash[:notice] = " sucessfully updated information"
+      redirect_to user_spaces_path(@user.id)
+    else
+      flash[:msg] = "information was not updated"
+      redirect_to user_spaces_path(@user.id)
+    end
   end
 
   def show
   end
 
   def destroy
+    @user = User.find(params[:user_id])
+    @space = Space.find(params[:id])
+    if @space.destroy
+     flash[:notice] = "space deleted"
+      redirect_to user_spaces_path(@user.id)
+    else
+      flash[:msg] = "unable to delete space"
+      redirect_to user_spaces_path(@user.id)
+    end
   end
 
   def edit
+    @user = User.find(params[:user_id])
+    @space = Space.find(params[:id])    
   end
 
   private

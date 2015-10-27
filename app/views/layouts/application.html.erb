@@ -7,9 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= render 'layouts/alerts' %> 
-	<%= render 'layouts/header' %>
-	<%= yield %>
+	<%= render 'layouts/header'%>
+	
+	<div class = "jumbotron">
+		<% if flash[:msg] %>
+			<div class  = "alert alert-warning">
+			<%= flash[:msg]%>
+		</div>	
+		<% end %>
+
+		<% if notice %>
+	  	<div class="alert alert-success"><%= notice %></div>
+		<% end %>
+		<% if alert %>
+	  	<div class="alert alert-danger"><%= alert %></div>
+		<% end %>
+
+		<%= yield %>
+		
+	</div>
 
 	<%= render 'layouts/footer' %>
 	

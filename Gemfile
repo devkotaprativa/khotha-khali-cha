@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+#style the style
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'autoprefixer-rails'
 #paperclip to upload anything
 gem 'paperclip'
 #devise for authentication

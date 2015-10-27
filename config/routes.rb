@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'rentals/index'
-
-  get 'rental/index'
+  get 'rentals/index'  
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

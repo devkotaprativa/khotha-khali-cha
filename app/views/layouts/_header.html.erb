@@ -2,15 +2,17 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <p class = "navbar-text pull-right"> 
-    	<%= link_to "want to host","", class: "btn btn-lg btn-primary navigation" %>
-    	<%= link_to "sign up", new_user_registration_path, 
-    		class: "btn btn-lg btn-primary navigation"%>
+    	
+    	
     	<% if user_signed_in? %>
+        <%= link_to "Add new space",new_user_space_path(current_user.id), class: "btn btn-lg btn-primary navigation" %>
     		<%= link_to "logout",destroy_user_session_path, class: "btn btn-lg btn-primary navigation", method: :delete
     		%>
     	<% else %>
     		<%= link_to "login",new_user_session_path, class: "btn btn-lg btn-primary navigation"
     		%>
+        <%= link_to "sign up", new_user_registration_path, 
+        class: "btn btn-lg btn-primary navigation"%>
     	<% end %>
     </p>
   </div>

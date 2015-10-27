@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151027090103) do
+ActiveRecord::Schema.define(version: 20151027101247) do
 
   create_table "spaces", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20151027090103) do
     t.integer  "user_id",         limit: 4
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.integer  "price",           limit: 4
   end
 
   add_index "spaces", ["user_id"], name: "index_spaces_on_user_id", using: :btree

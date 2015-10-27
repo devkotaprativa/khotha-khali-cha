@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151027045745) do
+ActiveRecord::Schema.define(version: 20151027090103) do
+
+  create_table "spaces", force: :cascade do |t|
+    t.string   "name",            limit: 255
+    t.string   "location",        limit: 255
+    t.integer  "phone_number",    limit: 8
+    t.integer  "number_of_rooms", limit: 4
+    t.integer  "user_id",         limit: 4
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  add_index "spaces", ["user_id"], name: "index_spaces_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -31,4 +43,5 @@ ActiveRecord::Schema.define(version: 20151027045745) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "spaces", "users"
 end

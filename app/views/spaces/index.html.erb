@@ -2,7 +2,7 @@
 <div class = "row" id = "show-list">
 	<% @spaces.each do |s| %>
 		<div class = "col-sm-4" id = "list_<% s.id %>">
-			<%binding.pry%>
+			
 			<h3>Appartment:<%= link_to s.name %></h3>
 			<h4>location: <%= s.location %></h4>
 			<h4>available rooms: <%= s.number_of_rooms %></h4>

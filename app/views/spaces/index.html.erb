@@ -1,0 +1,7 @@
+<h1>you have hosted following appartments </h1>
+<% @spaces.each do |s| %>
+<h3>Hotel:<%= link_to s.name,"" %></h3>
+<h4>location: <%= s.location %></h4>
+<h4>available rooms: <%= s.number_of_rooms %></h4>
+<h4>Contact adress: <%= s.location %></h4>
+<% end %>

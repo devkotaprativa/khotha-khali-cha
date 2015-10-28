@@ -1,0 +1,42 @@
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Create New Room</h4>
+      </div>
+      <div class="modal-body">
+          <%= form_for [@user, @space] do |f| %>
+            <p>
+              <%= f.label :name %><br>
+              <%= f.text_field :name %>
+            </p>
+            <p>
+              <%= f.label :location %><br>
+              <%= f.text_field :location %>
+            </p>
+            <p>
+              <%= f.label :phone_number %><br>
+              <%= f.number_field :phone_number %>
+            </p>
+            <p>
+              <%= f.label :number_of_rooms %><br>
+              <%= f.number_field :number_of_rooms %>
+            </p>
+            <p>
+              <%= f.label :price %><br>
+              <%= f.number_field :price %>
+            </p>
+            <p>
+              <%= f.submit %>   
+            </p>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>

@@ -2,6 +2,8 @@ class SpacesController < ApplicationController
   def index
     @user =current_user
     @spaces = Space.all
+    binding.pry
+    @space = Space.find(params[:id])
   end
 
   def new

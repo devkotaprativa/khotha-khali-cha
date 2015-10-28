@@ -3,7 +3,7 @@ class SpacesController < ApplicationController
     @user =current_user
     @spaces = Space.all
     # binding.pry
-    
+    @space = Space.new
   end
 
   def new
@@ -67,6 +67,6 @@ class SpacesController < ApplicationController
   private
 
   def set_params
-    params.require(:space).permit(:name, :location, :phone_number, :number_of_rooms, :price)
+    params.require(:space).permit(:name, :location, :phone_number, :number_of_rooms, :price, :image)
   end
 end

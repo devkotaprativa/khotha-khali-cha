@@ -16,6 +16,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@baseFontSize: 18px;
+@baseLineHeight: 18px;
+
 .btn-lg{
 	padding:6px 16px;
 }
@@ -61,4 +64,9 @@
 .extra-image{
 	margin:10px;
 	width:55%;
+}
+
+.explore{
+	color:#585858;
+	background-color:#96B3D3;
 }

@@ -2,8 +2,8 @@ class SpacesController < ApplicationController
   def index
     @user =current_user
     @spaces = Space.all
-    binding.pry
-    @space = Space.find(params[:id])
+    # binding.pry
+    
   end
 
   def new
@@ -37,6 +37,8 @@ class SpacesController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:user_id])
+    @space = Space.find(params[:id])
   end
 
   def destroy
@@ -54,6 +56,7 @@ class SpacesController < ApplicationController
       respond_to do |format|
        format.js 
      end
+
   end
 
   def edit

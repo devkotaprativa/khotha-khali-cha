@@ -1,4 +1,4 @@
-<div id="myModal" class="modal fade" role="dialog">
+<div id="myModal-<%= space.id%>" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -6,7 +6,7 @@
         <h4 class="modal-title">Create New Room</h4>
       </div>
       <div class="modal-body">
-          <%= form_for [@user, @space] do |f| %>
+          <%= form_for [@user, space] do |f| %>
             <p>
               <%= f.label :name %><br>
               <%= f.text_field :name %>

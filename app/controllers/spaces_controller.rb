@@ -39,20 +39,17 @@ class SpacesController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @space = Space.find(params[:id])
+    respond_to do |format|
+      # format.html # show.html.erb
+      format.js # show.js.erb
+    end
   end
 
   def destroy
     @user = User.find(params[:user_id])
     @space = Space.find(params[:id])
     # binding.pry
-     @space.destroy
-    #  flash[:notice] = "space deleted"
-    #   #redirect_to user_spaces_path(@user.id)
-    # else
-    #   flash[:msg] = "unable to delete space"
-    #   #redirect_to user_spaces_path(@user.id)
-    # end
-    # binding.pry
+     @space.destroy   
       respond_to do |format|
        format.js 
      end

@@ -4,7 +4,7 @@
         <p class = "navbar-text pull-right">        	
         	
         	<% if user_signed_in? %>
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add new spaces</button>
 
         		<%= link_to "logout",destroy_user_session_path, class: "btn btn-lg btn-primary navigation", method: :delete
         		%>

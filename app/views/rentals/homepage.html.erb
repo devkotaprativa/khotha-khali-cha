@@ -1,16 +1,21 @@
+<%#= render 'spaces/header'%>
+
 <div class = "row">
-	<div class = 'col-sm-4'>
+	<div class = 'col-sm-2 side-bar'>
+
+	</div>
+	<div class = "col-sm-3 extra-space">
 		<div class = "thumbnails">
 			<div class= "caption">
 				<h3>Have some extra space</h3>
 				<p> share it and earn money</p>
 				<p>
-					<%= link_to "see how you can earn",new_user_session_path, class: "btn btn-primary btn-large"%>
+					<%= link_to "see how you can earn",new_user_session_path, class: "btn btn-primary btn-lg"%>
 				</p>
 			</div>
 		</div>
 	</div>
-	<div class = 'col-sm-8'>
+	<div class = 'col-sm-7'>
 		<div class = "image-holder navbar-text pull-right">
 			<%= image_tag("rooms.jpg")%>
 		</div>

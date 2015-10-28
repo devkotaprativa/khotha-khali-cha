@@ -19,19 +19,36 @@
 .btn-lg{
 	padding:6px 16px;
 }
+
 .navigation{
 	margin:0px 15px 0px 15px;
+}
+
+.header-top{
+	margin-bottom:3px;
 }
 
 .header{
 	margin:0px;
 }
+
 .alert{
 	margin-top:20px;
 }
+
 .body{
 	padding-top:80px;
 }
+
 .jumbotron{
 	padding-top:80px;
+}
+
+.extra-space{
+	margin-top:85px;
+	background: #EFE4FF;
+	box-shadow: inset 0 -1px 1px rgba(0,0,0,0.1), /*bottom internal shadow*/
+	inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
+	padding-left:78px;
+
 }

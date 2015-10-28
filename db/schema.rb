@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151028081240) do
+ActiveRecord::Schema.define(version: 20151028140607) do
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer  "post_id",     limit: 4
+    t.integer  "client_id",   limit: 4
+    t.integer  "status",      limit: 4
+    t.integer  "no_of_rooms", limit: 4
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
 
   create_table "spaces", force: :cascade do |t|
     t.string   "name",               limit: 255

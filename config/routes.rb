@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
  
-  get 'rentals/homepage'
-  get 'rentals/index'  
-
   devise_for :users
   resources :users do
     resources :spaces
@@ -20,6 +17,11 @@ Rails.application.routes.draw do
       root :to => "rentals#homepage", as: :unauthenticated_root
     end
   end
+  resources :spaces do 
+    resources :bookings
+  end
+
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -7,16 +7,17 @@
         
         <%= image_tag(s.image.url(:medium),class: "image")%>
         <div class = "caption">
-    			<h3>Appartment:<%= link_to s.name %></h3>    			
-    			<h4>available rooms: <%= s.number_of_rooms %></h4>
-    			<h4>price per room: <%= s.price %> rupees </h4>    			
+    		<h3>Appartment:<%= link_to s.name %></h3>    			
+    		<h4>available rooms: <%= s.number_of_rooms %></h4>
+    		<h4>price per room: <%= s.price %> rupees </h4>    			
 
-    			<%= link_to "Show", user_space_path(current_user.id,s.id), :type=>"button", :class=>"btn btn-info btn-lg", data: {toggle: "modal", target: "#mModal"},remote: true %>
-    			<!-- 
-    			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mModal">Open Modal</button>-->
-     
-    			<%= link_to "Delete",user_space_path(@user.id, s.id),class: "btn btn-primary remote-link", method: :delete, data:{confirm: "r u sure?"}, remote: true%>
-          
+    		<%= link_to "Show", user_space_path(current_user.id,s.id), :type=>"button", :class=>"btn btn-info btn-lg", data: {toggle: "modal", target: "#mModal"},remote: true %>
+    		<!-- 
+    		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mModal">Open Modal</button>-->
+
+    		<%= link_to "Delete",user_space_path(@user.id, s.id),class: "btn btn-primary remote-link", method: :delete, data:{confirm: "r u sure?"}, remote: true%>
+
+            <%= link_to "book", new_space_booking_path(s.id), class: "btn btn-info btn-lg"%>
         </div>
   		</div>
     </div>      	

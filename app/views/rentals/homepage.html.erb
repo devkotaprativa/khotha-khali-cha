@@ -1,8 +1,7 @@
-<%#= render 'spaces/header'%>
+<%= render 'layouts/header'%>
 
 <div class = "row">
-	<div class = 'col-sm-2 side-bar'>
-
+	<div class = "col-sm-2">
 	</div>
 	<div class = "col-sm-3 extra-space">
 		<div class = "thumbnails">
@@ -10,15 +9,45 @@
 				<h3>Have some extra space</h3>
 				<p> share it and earn money</p>
 				<p>
-					<%= link_to "see how you can earn",new_user_session_path, class: "btn btn-primary btn-lg"%>
+					<%#= link_to "see how you can earn",new_user_session_path, class: "btn btn-primary btn-lg"%>
+					<%= link_to "see how you can earn","", class: "btn btn-primary btn-lg btn-earn"%>
 				</p>
 			</div>
 		</div>
 	</div>
-	<div class = 'col-sm-7'>
+	<div class = 'col-sm-6 extra-image'>
 		<div class = "image-holder navbar-text pull-right">
 			<%= image_tag("rooms.jpg")%>
 		</div>
 	</div>
-	<div class = 'col-sm-4'>
 </div>
+
+			<div class = 'side-bar'>
+		<p>
+			Have some extra space? Its time you share it with world.
+			World has become smaller place as the technology.As the global conciousness is on rise
+			people now are travelling futher than we could imagine.
+		</p>
+		<p>
+			More than hundred millions travellers have crossed our services and the counting is still undoubtly rising.
+		</p>
+		<P>
+			Nothing please Travellers more than sleeping in bed that feels like home.We,
+			ShareIt, as the name itself defines, work hard to bring those travellers close to
+			their home, your home.
+		</p>
+		<p>
+			While traveller are getting sleep of heaven, you on other hand can earn some money
+			with your barren space.
+		</p>
+		<p>
+			ShareIt makes it easy for you in three step. 
+			<ol>
+				<li>Sign up</li>
+				<li>Fill the form hence giving us information about your place</li>
+				<li>Traveller will request to book your space.Of course you are boss to decide who gets what</li>
+				<li>They will make payment from ShareIt from which 10% is deducted as ShareIt service charge</li>
+			</ol>
+		</p>
+	</div>
+	

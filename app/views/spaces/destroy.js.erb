@@ -1,5 +1,1 @@
-<%#binding.pry%>
-$("#list_<% @space.id %>").fadeOut(1000, function(){
-	
-	$(this).remove();
-});
+$('#list-'+<%= @space.id %>).fadeOut(400)

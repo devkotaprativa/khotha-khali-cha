@@ -2,7 +2,7 @@
 	<h2 class = "text-center"><em>My Spaces</em> </h2>
 <div class = "row" id = "show-list">
 	<% @spaces.each do |s| %>
-		<div class = "col-sm-4" id = "list-<%= s.id %>">
+		<div class = "col-sm-4 col-md-4" id = "list-<%= s.id %>">
       <div class = "thumbnail-index">
         
         <%= image_tag(s.image.url(:medium),class: "image")%>

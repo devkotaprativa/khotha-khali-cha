@@ -1,5 +1,5 @@
 	<%= render 'header' %>
-	<h1 class = "text-center">currently hosting </h1>
+	<h2 class = "text-center"><em>My Spaces</em> </h2>
 <div class = "row" id = "show-list">
 	<% @spaces.each do |s| %>
 		<div class = "col-sm-4" id = "list-<%= s.id %>">
@@ -13,7 +13,7 @@
 
         		<%= link_to "Show", user_space_path(current_user.id,s.id), :type=>"button", :class=>"btn btn-info btn-lg", data: {toggle: "modal", target: "#mModal"},remote: true %> 
 
-                <%= link_to "Edit",edit_user_space_path(current_user.id,s.id), :type=>"button", :class=>"btn btn-info btn-lg", data: {toggle: "modal", target:"#fModal"},remote: true %> 
+                <%= link_to "Edit",edit_user_space_path(current_user.id,s.id), :type=>"button", :class=>"btn btn-info btn-lg", data: {toggle: "modal", target:"#2Modal"},remote: true %> 
 
 
                 

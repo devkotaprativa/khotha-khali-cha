@@ -6,9 +6,12 @@ class SpacesController < ApplicationController
     @space = Space.new
   end
 
-  def new
+  def new   
     @user = User.find(params[:user_id])
     @space = Space.new
+    respond_to do |format|
+      format.js
+    end
   end
 
   def create
@@ -25,15 +28,16 @@ class SpacesController < ApplicationController
   end
 
   def update
+
     @user = User.find(params[:user_id])
     @space = Space.find(params[:id])
-    if @space.update(set_params)
-     flash[:notice] = " sucessfully updated information"
-      redirect_to user_spaces_path(@user.id)
-    else
-      flash[:msg] = "information was not updated"
-      redirect_to user_spaces_path(@user.id)
-    end
+     @space.update(set_params)
+    #  flash[:notice] = " sucessfully updated information"
+    #   redirect_to user_spaces_path(@user.id)
+    # else
+    #   flash[:msg] = "information was not updated"
+    #   redirect_to user_spaces_path(@user.id)
+    # end
   end
 
   def show
@@ -57,8 +61,13 @@ class SpacesController < ApplicationController
   end
 
   def edit
+    # binding.pry
     @user = User.find(params[:user_id])
-    @space = Space.find(params[:id])    
+    @space = Space.find(params[:id])   
+    respond_to do |format|
+      format.js
+    end
+
   end
 
   private

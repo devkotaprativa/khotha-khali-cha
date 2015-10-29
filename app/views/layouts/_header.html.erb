@@ -1,5 +1,9 @@
 <div class = "navbar navbar-inverse navbar-fixed-top header-top ">
 	<section class = "logo">
-		<h5 class="text-primary btn-lg navbar-static-top">ShareIT</h5>
+		<h5 class="text-primary btn-lg navbar-static-top">
+			<%= link_to " ShareIT ", unauthenticated_root_path, :class => 'navbar-link pull-left btn-lg btn ' %> 
+		<%= link_to " Sign up ", new_user_registration_path, :class => 'navbar-link pull-right' %> 
+		  <%= link_to "Login ", new_user_session_path, :class => 'navbar-link pull-right'  %>
+		  </h5>
 	</section>
 </div>

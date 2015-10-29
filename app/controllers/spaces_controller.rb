@@ -31,13 +31,13 @@ class SpacesController < ApplicationController
 
     @user = User.find(params[:user_id])
     @space = Space.find(params[:id])
-     @space.update(set_params)
-    #  flash[:notice] = " sucessfully updated information"
-    #   redirect_to user_spaces_path(@user.id)
-    # else
-    #   flash[:msg] = "information was not updated"
-    #   redirect_to user_spaces_path(@user.id)
-    # end
+     if @space.update(set_params)
+     flash[:notice] = " sucessfully updated information"
+      redirect_to user_spaces_path(@user.id)
+    else
+      flash[:msg] = "information was not updated"
+      redirect_to user_spaces_path(@user.id)
+    end
   end
 
   def show

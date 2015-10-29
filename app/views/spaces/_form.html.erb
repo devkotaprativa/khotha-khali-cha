@@ -3,23 +3,23 @@
 <%= form_for [@user, @space] do |f| %>
 	<p>
 		<%= f.label :name %><br>
-		<%= f.text_field :name %>
+		<%= f.text_field :name, :required => true %>
 	</p>
 	<p>
-		<%= f.label :location %><br>
+		<%= f.label :location, :required => true %><br>
 		<%= f.text_field :location %>
 	</p>
 	<p>
 		<%= f.label :phone_number %><br>
-		<%= f.number_field :phone_number %>
+		<%= f.number_field :phone_number, :placeholder => 'minimun length 3' %>
 	</p>
 	<p>
 		<%= f.label :number_of_rooms %><br>
-		<%= f.number_field :number_of_rooms %>
+		<%= f.number_field :number_of_rooms, :placeholder => 'minimun 1' %>
 	</p>
 	<p>
 		<%= f.label :price %><br>
-		<%= f.number_field :price %>
+		<%= f.number_field :price,:placeholder => 'greater than 100' %>
 	</p>
 	<p>
 		<%= f.label :image %><br>

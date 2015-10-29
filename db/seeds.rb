@@ -10,3 +10,8 @@ Space.create(name: "clarion", location: "nepal", phone_number:98748, number_of_r
 Space.create(name: "abudabi", location: "dubai", phone_number:98748, number_of_rooms:44, price:2000,user_id:1)
 Space.create(name: "hayat", location:"japan", phone_number:98748, number_of_rooms:44, price:2000,user_id:1)
 Space.create(name: "whiteHouse", location:"korea", phone_number:98748, number_of_rooms:44, price:2000,user_id:1)
+
+Space.create(name: "mount set", location: "japan", phone_number:98748, number_of_rooms:44, price:2000,user_id:1)
+Space.create(name: "Everes", location: "nepal", phone_number:98748, number_of_rooms:44, price:2000,user_id:1)
+Space.create(name: "pparaji", location:"philipines", phone_number:98748, number_of_rooms:44, price:2000,user_id:1)
+Space.create(name: "whiteHouse", location:"korea", phone_number:98748, number_of_rooms:44, price:2000,user_id:1)

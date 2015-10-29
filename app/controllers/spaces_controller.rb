@@ -4,6 +4,8 @@ class SpacesController < ApplicationController
     @spaces = Space.all
     # binding.pry
     @space = Space.new
+    @result = Space.search(params[:search])
+    binding.pry    
   end
 
   def new   
@@ -68,7 +70,7 @@ class SpacesController < ApplicationController
       format.js
     end
 
-  end
+  end 
 
   private
 

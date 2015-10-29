@@ -1,30 +1,26 @@
-	<%= render 'header' %>
-	<h2 class = "text-center"><em>My Spaces</em> </h2>
+<%= render 'header' %>
+
+<h2 class = "text-center"><em>My Spaces</em> </h2>
 <div class = "row" id = "show-list">
-	<% @spaces.each do |s| %>
-		<div class = "col-sm-4 col-md-4" id = "list-<%= s.id %>">
-      <div class = "thumbnail-index">
-        
+  <% @spaces.each do |s| %>
+    <div class = "col-sm-4 col-md-4" id = "list-<%= s.id %>">
+      <div class = "thumbnail-index"> 
         <%= image_tag(s.image.url(:medium),class: "image")%>
-            <div class = "caption">
-        		<h3>Appartment:<%= link_to s.name %></h3>    			
-        		<h4>available rooms: <%= s.number_of_rooms %></h4>
-        		<h4>price per room: <%= s.price %> rupees </h4>    			
+        <div class = "caption">
+          <h3>Appartment:<%= link_to s.name %></h3>    			
+          <h4>available rooms: <%= s.number_of_rooms %></h4>
+          <h4>price per room: <%= s.price %> rupees </h4> 		
 
-        		<%= link_to "Show", user_space_path(current_user.id,s.id), :type=>"button", :class=>"btn btn-primary btn-lg", data: {toggle: "modal", target: "#mModal"},remote: true %> 
+          <%= link_to "Show", user_space_path(current_user.id,s.id), :type=>"button", :class=>"btn btn-primary btn-lg", data: {toggle: "modal", target: "#mModal"},remote: true %> 
 
-                <%= link_to "Edit",edit_user_space_path(current_user.id,s.id), :type=>"button", :class=>"btn btn-primary btn-lg", data: {toggle: "modal", target:"#2Modal"},remote: true %> 
+          <%= link_to "Edit",edit_user_space_path(current_user.id,s.id), :type=>"button", :class=>"btn btn-primary btn-lg", data: {toggle: "modal", target:"#2Modal"},remote: true %>             
 
-
-                
-
-        		<%= link_to "Delete",user_space_path(@user.id, s.id),class: "btn btn-primary delete remote-link", method: :delete, data:{confirm: "r u sure?"}, remote: true%>
-
-                <%#= link_to "book", new_space_booking_path(s.id), class: "btn btn-info btn-lg"%>
-            </div>
-  		</div>
+          <%= link_to "Delete",user_space_path(@user.id, s.id),class: "btn btn-primary delete remote-link", method: :delete, data:{confirm: "r u sure?"}, remote: true%>
+          <%#= link_to "book", new_space_booking_path(s.id), class: "btn btn-info btn-lg"%>
+        </div>
+      </div>
     </div>      	
-	<% end %>
+  <% end %>
 </div>
 
 <%= render 'showModal' %>

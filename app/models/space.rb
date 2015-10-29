@@ -13,8 +13,11 @@ class Space < ActiveRecord::Base
 
 
   def self.search(search)
-	  where("name LIKE ?", "%#{search}%") 
-	  where("location LIKE ?", "%#{search}%")
-	end
+    if search
+      self.where("location like ?", "%#{search}%")
+    else
+      self.all
+    end
+  end
 
 end

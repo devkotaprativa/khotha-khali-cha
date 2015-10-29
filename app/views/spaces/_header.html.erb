@@ -16,11 +16,10 @@
         	<% end %>
           <!-- search  -->          
             <div class = "search">
-              <%= form_tag user_spaces_path(current_user.id), :method => 'get' do %>
+              <%= form_tag spaces_path, :method => 'get' do %>
                 <p>                  
-                  
                   <%= text_field_tag :search, params[:search] %>
-                  <%= submit_tag "Search" %>
+                  <%= submit_tag "Search", :name=>nil %>
                 </p>
               <% end %>
             </div>

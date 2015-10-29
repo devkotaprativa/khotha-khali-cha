@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
  
+
+
   devise_for :users
   resources :users do
     resources :spaces
@@ -19,7 +21,9 @@ Rails.application.routes.draw do
   end
   resources :spaces do 
     resources :bookings
+    get 'search' 
   end
+  
 
   
 

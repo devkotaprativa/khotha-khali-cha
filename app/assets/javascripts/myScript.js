@@ -1,5 +1,6 @@
 $(document).ready(function(){	
-	$(".side-bar").hide();        
+	$(".side-bar").hide(); 
+	$(".join-slide").hide();       
 });   
     
 
@@ -13,5 +14,15 @@ $(document).ready(function(){
   });    
 });
 
+$(document).ready(function(){	
+  $(".join-us").click(function(event){
+		event.preventDefault();
+    $(".join-slide").toggle(700);
+    $('html, body').animate({
+        scrollTop: $(".join-focus").offset().top
+    }, 2000);
+  });    
+});
 
 
+	

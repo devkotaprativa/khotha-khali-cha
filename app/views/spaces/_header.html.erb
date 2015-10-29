@@ -1,7 +1,8 @@
 <div class = "header">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <p class = "navbar-text pull-right">        	
+        <p class = "navbar-text pull-right"> 
+
         	
         	<% if user_signed_in? %>
             <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add new spaces</button> -->
@@ -15,9 +16,25 @@
             <%= link_to "sign up", new_user_registration_path, 
             class: "btn btn-lg btn-primary navigation"%>
         	<% end %>
+          <!-- search  -->
+          
+
+            <% form_tag projects_path, :method => 'get' do %>
+              <p>
+                <%= text_field_tag :search, params[:search] %>
+                <%= submit_tag "Search", :name => nil %>
+              </p>
+            <% end %>
+
+
+
         </p>
       </div>
     </nav>
        
 </div>
 <%= render partial:'modal' %>    
+
+
+
+

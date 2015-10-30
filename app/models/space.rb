@@ -1,4 +1,5 @@
 class Space < ActiveRecord::Base
+  
   belongs_to :user
   has_many :bookings
   validates :name, :location, :phone_number, :number_of_rooms, :price, 
@@ -15,8 +16,7 @@ class Space < ActiveRecord::Base
   def self.search(search)
     if search
       self.where("location like ?", "%#{search}%")
-    else
-      self.all
+    
     end
   end
 

@@ -1,11 +1,13 @@
+
 class SpacesController < ApplicationController
+  before_filter :authenticate_user!
   def index
-    @user =current_user
-    @spaces = Space.all
+    @user= current_user
+    @spaces = @user.spaces
     # binding.pry
     @space = Space.new
-    @result = Space.search(params[:search])
-    binding.pry    
+      
+    @results = Space.search(params[:search])
   end
 
   def new   

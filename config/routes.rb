@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   end
   resources :spaces do 
     resources :bookings
-    get 'search' 
+    get 'index'
   end
   
 

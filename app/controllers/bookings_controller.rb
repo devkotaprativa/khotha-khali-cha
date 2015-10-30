@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
     @client = current_user
     @booking  = Booking.new(set_params)
     @booking.client_id = @client.id
-    @booking.post_id =@space.id
+    @booking.space_id =@space.id
     @booking.status = :pending
     if @booking.save
       flash[:msg]="booking request sent"
@@ -22,7 +22,7 @@ class BookingsController < ApplicationController
 
   def index
     @space = Space.find(params[:space_id]) 
-    
+
   end
 
   def destroy

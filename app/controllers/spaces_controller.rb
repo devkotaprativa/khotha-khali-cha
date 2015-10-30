@@ -6,7 +6,6 @@ class SpacesController < ApplicationController
     @spaces = @user.spaces
     # binding.pry
     @space = Space.new
-      
     @results = Space.search(params[:search])
   end
 
@@ -71,8 +70,13 @@ class SpacesController < ApplicationController
     respond_to do |format|
       format.js
     end
-
   end 
+
+  def space_booking
+    @spaces = current_user.spaces
+    @user = current_user
+    bookings = @user.my_bookings
+  end
 
   private
 

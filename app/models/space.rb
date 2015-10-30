@@ -18,6 +18,7 @@ class Space < ActiveRecord::Base
       self.where("location like ?", "%#{search}%")    
     end
   end
+
   
 
 end

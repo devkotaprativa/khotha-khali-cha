@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   resources :spaces do 
     resources :bookings
     get 'index'
+    get 'space_booking'
   end
   
 

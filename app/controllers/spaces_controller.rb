@@ -72,10 +72,9 @@ class SpacesController < ApplicationController
     end
   end 
 
-  def space_booking
-    @spaces = current_user.spaces
+  def space_booking   
     @user = current_user
-    bookings = @user.my_bookings
+    @bookings = @user.my_bookings
   end
 
   private

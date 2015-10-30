@@ -1,6 +1,6 @@
 <h3>All bookings</h3>
-<% if @booking.present? %>
+<% if @bookings.present? %>
 	<% @bookings.each do |b| %>
-	   <%= b.client_id %>
+	   <%= b.username b %>
 	  <% end %>
 <% end %>

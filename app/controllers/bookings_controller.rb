@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
     @booking  = Booking.new(set_params)
     @booking.client_id = @client.id
     @booking.space_id =@space.id
+    @booking.user_id = @space.user_id
     @booking.status = :pending
     if @booking.save
       flash[:msg]="booking request sent"
